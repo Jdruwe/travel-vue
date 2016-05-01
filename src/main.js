@@ -1,12 +1,21 @@
 import Vue from 'vue'
-import App from './App'
 import VueRouter from 'vue-router'
-import Routes from './routes'
+import App from './components/App'
+import HomeView from './components/HomeView'
+import AboutView from './components/AboutView'
 
 Vue.use(VueRouter)
 
 var router = new VueRouter()
 
-router.map(Routes)
-router.start(App, 'app')
+router.map({
+  '/': {
+    component: HomeView
+  },
+  '/about': {
+    component: AboutView
+  }
+})
+
+router.start(App, '#app')
 

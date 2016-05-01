@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "babel-runtime": "^5.8.0",
-    "vue": "^1.0.18"
+    "vue": "^1.0.18",
+    "vue-router": "^0.7.13"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
@@ -71,7 +72,6 @@
     "webpack": "^1.12.2",
     "webpack-dev-middleware": "^1.4.0",
     "webpack-hot-middleware": "^2.6.0",
-    "webpack-merge": "^0.8.3",
-    "vue-router": "^0.7.13"
+    "webpack-merge": "^0.8.3"
   }
 }
