@@ -3,8 +3,9 @@
     <img class="logo" src="../assets/logo.png">
 
     <!-- use v-link directive for navigation. -->
-    <a v-link="{ path: '/' }">Home</a>
-    <a v-link="{ path: '/about' }">About</a>
+    <a v-link="{ path: '/', exact: true, activeClass: 'active' }">Home</a>
+    <a v-link="{ path: '/about', exact: true, activeClass: 'active' }">About</a>
+    <a v-link="{ name: 'aboutDetail', params: { detail: 'Turkey' }, exact: true, activeClass: 'active' }">About Sweden</a>
 
     <router-view></router-view>
 
@@ -31,8 +32,13 @@
     text-align: center;
 
   a {
-    color: gold;
     text-decoration: none;
+    color: gold;
+
+  }
+
+  a.active {
+    color: hotpink;
   }
 
   .logo {

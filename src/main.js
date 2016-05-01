@@ -14,6 +14,10 @@ router.map({
   },
   '/about': {
     component: AboutView
+  },
+  '/about/:detail': {
+    name: 'aboutDetail',
+    component: AboutView
   }
 })
 
