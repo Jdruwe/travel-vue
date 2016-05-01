@@ -1,7 +1,5 @@
 <template>
-  <div class="hello">
     <h1>{{ msg }}</h1>
-  </div>
 </template>
 
 <script>
@@ -12,7 +10,7 @@
         // with hot-reload because the reloaded component
         // preserves its current state and we are modifying
         // its initial state.
-        msg: 'Hello World!'
+        msg: 'You are now on the home page'
       }
     }
   }
