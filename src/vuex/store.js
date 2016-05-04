@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import { INCREMENT, DECREMENT } from './mutation-types'
 
 // Make vue aware of Vuex
 Vue.use(Vuex)
@@ -15,10 +16,10 @@ const state = {
 const mutations = {
   // A mutation receives the current state as the first argument
   // You can make any modifications you want inside this function
-  INCREMENT (state, amount) {
+  [INCREMENT] (state, amount) {
     state.count = state.count + amount
   },
-  DECREMENT (state, amount) {
+  [DECREMENT] (state, amount) {
     state.count = state.count - amount
   }
 }
