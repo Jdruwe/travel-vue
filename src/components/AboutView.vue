@@ -1,18 +1,27 @@
 <template>
-  <h1>{{ msg }} {{ $route.params.detail }}</h1>
+  <div>
+    <h1>{{ msg }} {{ $route.params.detail }}</h1>
+    <display></display>
+    <increment></increment>
+  </div>
 </template>
 
 <script>
+  import Display from './Display.vue'
+  import Increment from './Increment.vue'
+  import store from '../vuex/store'
+
   export default {
     data () {
       return {
-        // note: changing this line won't causes changes
-        // with hot-reload because the reloaded component
-        // preserves its current state and we are modifying
-        // its initial state.
         msg: 'You are now on the about page'
       }
-    }
+    },
+    components: {
+      Display,
+      Increment
+    },
+    store
   }
 </script>
 
