@@ -1,8 +1,11 @@
 # travel-vue
 
-> A Vue.js project
+> A Vue.js demo project originally generated using vue-cli
 
-## Build Setup
+
+## vue-cli
+
+### Build Setup
 
 ``` bash
 # install dependencies

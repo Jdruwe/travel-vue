@@ -9,7 +9,6 @@
 <script>
   import Display from './Display.vue'
   import Increment from './Increment.vue'
-  import store from '../vuex/store'
 
   export default {
     data () {
@@ -20,8 +19,7 @@
     components: {
       Display,
       Increment
-    },
-    store
+    }
   }
 </script>
 
