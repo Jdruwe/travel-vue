@@ -1,16 +1,18 @@
 import Vue from 'vue'
+import Keen from 'keen-ui'
 import VueRouter from 'vue-router'
 import App from './components/App'
-import HomeView from './components/HomeView'
 import AboutView from './components/AboutView'
+import CountriesView from './components/CountriesView'
 
 Vue.use(VueRouter)
+Vue.use(Keen)
 
 var router = new VueRouter()
 
 router.map({
-  '/': {
-    component: HomeView
+  '/countries': {
+    component: CountriesView
   },
   '/about': {
     component: AboutView
@@ -19,6 +21,10 @@ router.map({
     name: 'aboutDetail',
     component: AboutView
   }
+})
+
+router.redirect({
+  '*': '/countries'
 })
 
 router.start(App, '#app')
