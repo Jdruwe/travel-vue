@@ -1,6 +1,6 @@
 <template>
   <div>
-    This is the countries overview
+    <h1>Countries</h1>
   </div>
 </template>
 
