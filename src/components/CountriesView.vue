@@ -12,16 +12,12 @@
 
 <script>
   import Country from './Country.vue'
+  import { getCountries } from '../vuex/getters'
 
   export default {
-    data () {
-      return {
-        countries: [
-          {name: 'Belgium'},
-          {name: 'Netherlands'},
-          {name: 'France'},
-          {name: 'Germany'}
-        ]
+    vuex: {
+      getters: {
+        countries: getCountries
       }
     },
     components: {

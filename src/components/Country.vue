@@ -1,5 +1,5 @@
 <template>
-  <li>County: {{country.name}}</li>
+  <li>Country: {{country.name}}</li>
 </template>
 
 <script>

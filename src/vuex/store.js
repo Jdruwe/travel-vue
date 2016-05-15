@@ -9,7 +9,13 @@ Vue.use(Vuex)
 // the app starts up
 const state = {
   // When the app starts, count is set to 0
-  count: 0
+  count: 0,
+  countries: [
+    {name: 'Belgium'},
+    {name: 'Netherlands'},
+    {name: 'France'},
+    {name: 'Germany'}
+  ]
 }
 
 // Create an object storing various mutations. We will write the mutation
