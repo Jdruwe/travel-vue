@@ -1,15 +1,15 @@
 <template>
   <div id="wrapper">
-
-    <div class="group">
-      <ui-toolbar type="colored" text-color="white" title="Travel" nav-icon="room">
-        <div slot="actions">
-          <ui-button icon="room" color="primary" @click="navigateToCountries">Countries</ui-button>
-          <ui-button icon="star" color="primary" @click="navigateToCountries">Favorites</ui-button>
-          <ui-button icon="info" color="primary" @click="navigateToAbout">About</ui-button>
-        </div>
-      </ui-toolbar>
-    </div>
+    <nav>
+      <div class="nav-wrapper blue lighten-1">
+        <a href="#" class="brand-logo"><i class="material-icons left">room</i>Travel</a></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a v-link="{ path: '/countries', exact: true, activeClass: 'active' }">Countries</a></li>
+          <li><a v-link="{ path: '/countries', exact: true, activeClass: 'active' }">Favorites</a></li>
+          <li><a v-link="{ path: '/countries', exact: true, activeClass: 'active' }">About</a></li>
+        </ul>
+      </div>
+    </nav>
 
     <!-- use v-link directive for navigation. -->
     <!--<a v-link="{ path: '/countries', exact: true, activeClass: 'active' }">Countries</a>-->
@@ -33,35 +33,14 @@
       'nav-icon-clicked': function () {
         this.$router.go('/')
       }
-    },
-    methods: {
-      navigateToCountries: function () {
-        this.$router.go('/countries')
-      },
-      navigateToFavorites: function () {
-        this.$router.go('/countries')
-      },
-      navigateToAbout: function () {
-        this.$router.go('/about')
-      }
     }
   }
 </script>
 
 <style lang="scss">
-  @import '~keen-ui/dist/keen-ui.css';
 
-  body {
-    margin: 0px;
-    font-family: Roboto;
-  }
-
-  .container {
-    margin: 8px;
-  }
-
-  .ui-toolbar-right {
-    margin-right: 8px;
+  .brand-logo {
+    margin-left: 8px;
   }
 
 </style>

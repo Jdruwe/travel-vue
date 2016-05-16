@@ -1,18 +1,18 @@
 <template>
   <div>
-    <h1>Countries</h1>
-    <ul>
+    <div class="row">
       <country
         v-for="country in countries"
         :country="country">
       </country>
-    </ul>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
   import Country from './Country.vue'
-  import { getCountries } from '../vuex/getters'
+  import {getCountries} from '../vuex/getters'
 
   export default {
     vuex: {
