@@ -13,15 +13,22 @@
 <script>
   import Country from './Country.vue'
   import {getCountries} from '../vuex/getters'
+  import {getAllCountries} from '../vuex/actions'
 
   export default {
     vuex: {
       getters: {
         countries: getCountries
+      },
+      actions: {
+        getAllCountries
       }
     },
     components: {
       Country
+    },
+    created () {
+      this.getAllCountries()
     }
   }
 </script>

@@ -21,6 +21,11 @@ router.map({
   }
 })
 
+Vue.transition('fade', {
+  enterClass: 'fadeIn',
+  leaveClass: 'fadeOut'
+})
+
 router.redirect({
   '*': '/countries'
 })
