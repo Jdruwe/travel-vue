@@ -43,4 +43,18 @@
     margin-left: 8px;
   }
 
+  .fadeIn {
+    -webkit-animation: fadeIn 0.3s; /* Safari 4+ */
+    -moz-animation:    fadeIn 0.3s; /* Fx 5+ */
+    -o-animation:      fadeIn 0.3s; /* Opera 12+ */
+    animation:         fadeIn 0.3s; /* IE 10+, Fx 29+ */
+  }
+
+  .fadeOut {
+    -webkit-animation: fadeOut 0.3s; /* Safari 4+ */
+    -moz-animation:    fadeOut 0.3s; /* Fx 5+ */
+    -o-animation:      fadeOut 0.3s; /* Opera 12+ */
+    animation:         fadeOut 0.3s; /* IE 10+, Fx 29+ */
+  }
+
 </style>
