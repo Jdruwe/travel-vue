@@ -4,10 +4,16 @@
       <div class="nav-wrapper deep-purple darken-1">
         <a href="#" class="brand-logo"><i class="material-icons left">room</i>Travel</a></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a v-link="{ path: '/countries', exact: true, activeClass: 'active' }">Countries</a></li>
-          <li><a v-link="{ path: '/countries', exact: true, activeClass: 'active' }">Favorites</a></li>
-          <li><a v-link="{ path: '/about', exact: true, activeClass: 'active' }">About</a></li>
+          <li v-link-active><a v-link="{ path: '/countries', exact: true, activeClass: 'active' }">Countries</a></li>
+          <li v-link-active><a v-link="{ path: '/favorites', exact: true, activeClass: 'active' }">Favorites</a></li>
+          <li v-link-active><a v-link="{ path: '/about', exact: true, activeClass: 'active' }">About</a></li>
         </ul>
+        <ul id="slide-out" class="side-nav">
+          <li v-link-active><a v-link="{ path: '/countries', exact: true, activeClass: 'active' }">Countries</a></li>
+          <li v-link-active><a v-link="{ path: '/favorites', exact: true, activeClass: 'active' }">Favorites</a></li>
+          <li v-link-active><a v-link="{ path: '/about', exact: true, activeClass: 'active' }">About</a></li>
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="small material-icons">menu</i></a>
       </div>
     </nav>
 
@@ -25,6 +31,8 @@
 
 <script>
   import store from './../vuex/store'
+  var $ = window.jQuery = require('jquery')
+  require('materialize-css/bin/materialize.js')
 
   export default {
     name: 'App',
@@ -33,7 +41,14 @@
       'nav-icon-clicked': function () {
         this.$router.go('/')
       }
+    },
+    ready () {
+      $(function () {
+        $('.button-collapse').sideNav()
+        console.log($('#nav-mobile').attr('class'))
+      })
     }
+
   }
 </script>
 
@@ -45,16 +60,22 @@
 
   .fadeIn {
     -webkit-animation: fadeIn 0.3s; /* Safari 4+ */
-    -moz-animation:    fadeIn 0.3s; /* Fx 5+ */
-    -o-animation:      fadeIn 0.3s; /* Opera 12+ */
-    animation:         fadeIn 0.3s; /* IE 10+, Fx 29+ */
+    -moz-animation: fadeIn 0.3s; /* Fx 5+ */
+    -o-animation: fadeIn 0.3s; /* Opera 12+ */
+    animation: fadeIn 0.3s; /* IE 10+, Fx 29+ */
   }
 
   .fadeOut {
     -webkit-animation: fadeOut 0.3s; /* Safari 4+ */
-    -moz-animation:    fadeOut 0.3s; /* Fx 5+ */
-    -o-animation:      fadeOut 0.3s; /* Opera 12+ */
-    animation:         fadeOut 0.3s; /* IE 10+, Fx 29+ */
+    -moz-animation: fadeOut 0.3s; /* Fx 5+ */
+    -o-animation: fadeOut 0.3s; /* Opera 12+ */
+    animation: fadeOut 0.3s; /* IE 10+, Fx 29+ */
+  }
+
+  .button-collapse {
+    i{
+      margin-left: 8px;
+    }
   }
 
 </style>
