@@ -1,7 +1,7 @@
 <template>
   <div class="col s12 m6 l4">
     <div class="card">
-      <div class="card-image">
+      <div @click="navigateToAttractions" class="card-image waves-effect waves-block waves-light">
         <img :src="imagePath">
         <span class="card-title">{{country.name}}</span>
       </div>
@@ -9,7 +9,8 @@
         <p>{{shortenedIntro}}</p>
       </div>
       <div class="card-action">
-        <a href="#">Explore {{country.name}}</a>
+        <a v-link="{ name: 'attractions', params: { country: lowerCaseCountryName }, exact: true}">Explore
+          {{country.name}}</a>
       </div>
     </div>
   </div>
@@ -20,12 +21,23 @@
   export default {
     name: 'Country',
     props: ['country'],
+    methods: {
+      navigateToAttractions: function () {
+        this.$router.go({
+          name: 'attractions',
+          params: {country: this.lowerCaseCountryName}
+        })
+      }
+    },
     computed: {
       shortenedIntro: function () {
         return this.country.intro.substring(0, 100) + ' ...'
       },
       imagePath: function () {
         return '/static/' + this.country.name + '.jpg'
+      },
+      lowerCaseCountryName: function () {
+        return this.country.name.toLowerCase()
       }
     }
   }
