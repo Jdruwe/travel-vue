@@ -36,7 +36,7 @@
       </div>
       <div class="footer-copyright">
         <div class="container">
-          © 2016 Jeroen Druwé
+          © 2016 <a class="grey-text text-lighten-4" href="http://jeroendruwe.be" target="_blank">Jeroen Druwé</a>
           <a class="grey-text text-lighten-4 right footerLink" href="https://github.com/Jdruwe" target="_blank">Github</a>
           <a class="grey-text text-lighten-4 right footerLink" href="https://be.linkedin.com/in/jeroen-druwé-42840567" target="_blank">LinkedIn</a>
           <a class="grey-text text-lighten-4 right footerLink" href="https://twitter.com/JeroenDruwe" target="_blank">Twitter</a>
@@ -52,6 +52,8 @@
   var $ = window.jQuery = require('jquery')
   require('materialize-css/bin/materialize.js')
 
+  import {getAllCountries} from '../vuex/actions'
+
   export default {
     name: 'App',
     store: store,
@@ -65,8 +67,10 @@
         $('.button-collapse').sideNav()
       })
     }
-
   }
+
+  getAllCountries(store)
+
 </script>
 
 <style lang="scss">

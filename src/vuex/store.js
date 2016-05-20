@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 
 // import parts from modules
 import countries from './modules/countries'
+import attractions from './modules/attractions'
 
 // Make vue aware of Vuex
 Vue.use(Vuex)
@@ -12,6 +13,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
 // combine sub modules
   modules: {
-    countries
+    countries,
+    attractions
   }
 })

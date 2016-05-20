@@ -9,7 +9,7 @@
         <p>{{shortenedIntro}}</p>
       </div>
       <div class="card-action">
-        <a v-link="{ name: 'attractions', params: { country: lowerCaseCountryName }, exact: true}">Explore
+        <a v-link="{ name: 'attractions', params: { id: country.id }, exact: true}">Explore
           {{country.name}}</a>
       </div>
     </div>
@@ -18,14 +18,22 @@
 </template>
 
 <script>
+  import {switchCountry} from '../vuex/actions'
+
   export default {
     name: 'Country',
     props: ['country'],
+    vuex: {
+      actions: {
+        switchCountry
+      }
+    },
     methods: {
       navigateToAttractions: function () {
+        this.switchCountry(this.country.id)
         this.$router.go({
           name: 'attractions',
-          params: {country: this.lowerCaseCountryName}
+          params: {id: this.country.id}
         })
       }
     },
@@ -35,9 +43,6 @@
       },
       imagePath: function () {
         return '/static/' + this.country.name + '.jpg'
-      },
-      lowerCaseCountryName: function () {
-        return this.country.name.toLowerCase()
       }
     }
   }

@@ -13,7 +13,7 @@ router.map({
   '/countries': {
     component: CountriesView
   },
-  '/countries/:country': {
+  '/countries/:id': {
     name: 'attractions',
     component: AttractionsView
   },
@@ -36,4 +36,3 @@ router.redirect({
 })
 
 router.start(App, '#app')
-
