@@ -35,25 +35,29 @@ const _attractions = [
     id: 0,
     countryId: 0,
     name: 'Onze-Lieve-Vrouwekathedraal',
-    detail: 'De Onze-Lieve-Vrouwekathedraal is een kathedraal in de Belgische stad Antwerpen. De kathedraal staat aan de Handschoenmarkt en is de hoofdkerk van het bisdom Antwerpen. Ze is gewijd aan Maria. De kerk was een kathedraal tussen 1559 en 1803 en vanaf 1961 tot heden. De toren van de Onze-Lieve-Vrouwekathedraal is als onderdeel van een groep van 56 belforten in België en Frankrijk opgenomen op de lijst van werelderfgoed van UNESCO.'
+    detail: 'De Onze-Lieve-Vrouwekathedraal is een kathedraal in de Belgische stad Antwerpen. De kathedraal staat aan de Handschoenmarkt en is de hoofdkerk van het bisdom Antwerpen. Ze is gewijd aan Maria. De kerk was een kathedraal tussen 1559 en 1803 en vanaf 1961 tot heden. De toren van de Onze-Lieve-Vrouwekathedraal is als onderdeel van een groep van 56 belforten in België en Frankrijk opgenomen op de lijst van werelderfgoed van UNESCO.',
+    favorite: false
   },
   {
     id: 1,
     countryId: 0,
     name: 'Atomium',
-    detail: 'Het Atomium is een monument in het Heizelpark in Brussel. Het is een stalen constructie die bestaat uit negen bollen met elk een diameter van 18 meter. De bollen vormen samen het kubisch ruimtelijk gecentreerde kristalstructuur van ijzer, 165 miljard maal vergroot. Het gebouw werd ontworpen door ingenieur André Waterkeyn en is sinds de restauratie bekleed met roestvast staal. Vijf van de negen bollen zijn toegankelijk voor het publiek.'
+    detail: 'Het Atomium is een monument in het Heizelpark in Brussel. Het is een stalen constructie die bestaat uit negen bollen met elk een diameter van 18 meter. De bollen vormen samen het kubisch ruimtelijk gecentreerde kristalstructuur van ijzer, 165 miljard maal vergroot. Het gebouw werd ontworpen door ingenieur André Waterkeyn en is sinds de restauratie bekleed met roestvast staal. Vijf van de negen bollen zijn toegankelijk voor het publiek.',
+    favorite: false
   },
   {
     id: 2,
     countryId: 0,
     name: 'Grotten van Han',
-    detail: 'De grotten van Han vormen een stelsel van onderaardse grotten in Han-sur-Lesse nabij Rochefort, gelegen tussen de rivier de Lesse in de Belgische Ardennen. Het geheel staat bekend als een van de grootste grottencomplexen van Europa.'
+    detail: 'De grotten van Han vormen een stelsel van onderaardse grotten in Han-sur-Lesse nabij Rochefort, gelegen tussen de rivier de Lesse in de Belgische Ardennen. Het geheel staat bekend als een van de grootste grottencomplexen van Europa.',
+    favorite: false
   },
   {
     id: 3,
     countryId: 1,
     name: 'Efteling',
-    detail: 'De Efteling is een attractiepark in de plaats Kaatsheuvel in de Nederlandse provincie Noord-Brabant. Het is qua bezoekersaantallen en oppervlakte het grootste attractiepark van de Benelux. De Efteling is ook een van de 25 meest bezochte themaparken in de wereld en na Disneyland Parijs, Europa-Park en Tivoli Gardens het meest bezochte pretpark van Europa.'
+    detail: 'De Efteling is een attractiepark in de plaats Kaatsheuvel in de Nederlandse provincie Noord-Brabant. Het is qua bezoekersaantallen en oppervlakte het grootste attractiepark van de Benelux. De Efteling is ook een van de 25 meest bezochte themaparken in de wereld en na Disneyland Parijs, Europa-Park en Tivoli Gardens het meest bezochte pretpark van Europa.',
+    favorite: false
   }
 ]
 

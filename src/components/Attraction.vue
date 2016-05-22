@@ -10,10 +10,10 @@
 
       <div class="card-action">
         <a v-if="!attraction.favorite">
-          <i @click="favoriteAttraction(attraction.id)" class="material-icons left">favorite_border</i>
+          <i @click="favoriteAttraction(attraction)" class="material-icons left">favorite_border</i>
         </a>
         <a v-else>
-          <i class="material-icons left">favorite</i>
+          <i @click="undoFavoriteAttraction(attraction)" class="material-icons left">favorite</i>
         </a>
       </div>
 
@@ -27,14 +27,15 @@
 </template>
 
 <script>
-  import {favoriteAttraction} from '../vuex/actions'
+  import {favoriteAttraction, undoFavoriteAttraction} from '../vuex/actions'
 
   export default {
     name: 'Attraction',
     props: ['attraction'],
     vuex: {
       actions: {
-        favoriteAttraction
+        favoriteAttraction,
+        undoFavoriteAttraction
       }
     },
     computed: {

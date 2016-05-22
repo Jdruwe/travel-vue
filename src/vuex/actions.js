@@ -3,7 +3,8 @@ import {
   RECEIVE_COUNTRIES,
   RECEIVE_ATTRACTIONS,
   SWITCH_COUNTRY,
-  FAVORITE_ATTRACTION
+  FAVORITE_ATTRACTION,
+  UNDO_FAVORITE_ATTRACTION
 } from './mutation-types'
 
 export const getCountriesFromServer = ({dispatch}) => {
@@ -22,6 +23,10 @@ export const switchCountry = ({dispatch}, id) => {
   dispatch(SWITCH_COUNTRY, Number(id))
 }
 
-export const favoriteAttraction = ({dispatch}, id) => {
-  dispatch(FAVORITE_ATTRACTION, Number(id))
+export const favoriteAttraction = ({dispatch}, attraction) => {
+  dispatch(FAVORITE_ATTRACTION, attraction)
+}
+
+export const undoFavoriteAttraction = ({dispatch}, attraction) => {
+  dispatch(UNDO_FAVORITE_ATTRACTION, attraction)
 }

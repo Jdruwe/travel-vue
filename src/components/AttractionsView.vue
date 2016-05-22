@@ -2,8 +2,7 @@
   <div>
     <h3>{{country.name | capitalize}}</h3>
     <div v-if="attractions.length > 0" class="row">
-      <attraction v-for="attraction in attractions" :attraction="attraction" :active.sync="active">
-      </attraction>
+      <attraction v-for="attraction in attractions" :attraction="attraction"></attraction>
     </div>
 
     <div v-else class="row">
