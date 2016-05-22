@@ -4,7 +4,7 @@
 
     <header>
       <nav>
-        <div class="nav-wrapper deep-purple darken-1">
+        <div class="nav-wrapper indigo">
           <a href="#" class="brand-logo"><i class="material-icons left">room</i>Travel</a></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li v-link-active><a v-link="{ path: '/countries', exact: true, activeClass: 'active' }">Countries</a></li>
@@ -25,7 +25,7 @@
         <router-view class="animated" transition="fade" transition-mode="out-in"></router-view>
     </main>
 
-    <footer class="page-footer deep-purple darken-2">
+    <footer class="page-footer indigo">
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
@@ -52,7 +52,7 @@
   var $ = window.jQuery = require('jquery')
   require('materialize-css/bin/materialize.js')
 
-  import {getAllCountries} from '../vuex/actions'
+  import {getCountriesFromServer} from '../vuex/actions'
 
   export default {
     name: 'App',
@@ -62,15 +62,20 @@
         this.$router.go('/')
       }
     },
+    vuex: {
+      actions: {
+        getCountriesFromServer
+      }
+    },
     ready () {
       $(function () {
         $('.button-collapse').sideNav()
       })
+    },
+    created () {
+      this.getCountriesFromServer()
     }
   }
-
-  getAllCountries(store)
-
 </script>
 
 <style lang="scss">

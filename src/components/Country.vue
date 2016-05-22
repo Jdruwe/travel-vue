@@ -18,19 +18,11 @@
 </template>
 
 <script>
-  import {switchCountry} from '../vuex/actions'
-
   export default {
     name: 'Country',
     props: ['country'],
-    vuex: {
-      actions: {
-        switchCountry
-      }
-    },
     methods: {
       navigateToAttractions: function () {
-        this.switchCountry(this.country.id)
         this.$router.go({
           name: 'attractions',
           params: {id: this.country.id}
@@ -42,7 +34,7 @@
         return this.country.intro.substring(0, 100) + ' ...'
       },
       imagePath: function () {
-        return '/static/' + this.country.name + '.jpg'
+        return '/static/countries/' + this.country.name + '.jpg'
       }
     }
   }

@@ -4,7 +4,8 @@
 
 import {
   SWITCH_COUNTRY,
-  RECEIVE_ATTRACTIONS
+  RECEIVE_ATTRACTIONS,
+  FAVORITE_ATTRACTION
 } from '../mutation-types'
 
 // initial state
@@ -20,6 +21,16 @@ const mutations = {
   },
   [RECEIVE_ATTRACTIONS] (state, attractions) {
     state.all = attractions
+  },
+  [FAVORITE_ATTRACTION] (state, attractionId) {
+    console.log('favoriting:' + attractionId)
+    for (var i = 0; i < state.all.length; i++) {
+      if (state.all[i].id === attractionId) {
+        state.all[i].favorite = true
+        console.log('Setting on true')
+        break
+      }
+    }
   }
 }
 

@@ -1,25 +1,46 @@
 <template>
   <div>
-    <h1>{{country | capitalize}}</h1>
-    <div>id: {{currentCountryId}}</div>
+    <h3>{{country.name | capitalize}}</h3>
+    <div v-if="attractions.length > 0" class="row">
+      <attraction v-for="attraction in attractions" :attraction="attraction" :active.sync="active">
+      </attraction>
+    </div>
+
+    <div v-else class="row">
+      <div class="col s12 m5">
+        <div class="card-panel indigo lighten-2">
+          <span class="white-text">
+            <i class="material-icons left">warning</i>There are no attractions available yet, please come back later.
+          </span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
 <script>
-  import {getAttractionsFromCountry} from '../vuex/actions'
-  import {getCurrentCountryId} from '../vuex/getters'
+  import Attraction from './Attraction.vue'
+  import {switchCountry, getAttractionsFromServer} from '../vuex/actions'
+  import {getCountry, getAttractions} from '../vuex/getters'
 
   export default {
     vuex: {
       getters: {
-        currentCountryId: getCurrentCountryId
+        country: getCountry,
+        attractions: getAttractions
       },
       actions: {
-        getAttractionsFromCountry
+        switchCountry,
+        getAttractionsFromServer
       }
     },
     created () {
-      this.getAttractionsFromCountry(0)
+      this.switchCountry(this.$route.params.id)
+      this.getAttractionsFromServer()
+    },
+    components: {
+      Attraction
     }
   }
 </script>

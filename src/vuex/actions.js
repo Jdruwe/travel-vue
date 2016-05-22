@@ -1,20 +1,27 @@
 import server from '../../api/server'
-import {RECEIVE_COUNTRIES, RECEIVE_ATTRACTIONS, SWITCH_COUNTRY} from './mutation-types'
+import {
+  RECEIVE_COUNTRIES,
+  RECEIVE_ATTRACTIONS,
+  SWITCH_COUNTRY,
+  FAVORITE_ATTRACTION
+} from './mutation-types'
 
-export const getAllCountries = ({ dispatch }) => {
-  console.log('fetch from server')
+export const getCountriesFromServer = ({dispatch}) => {
   server.getCountries(products => {
     dispatch(RECEIVE_COUNTRIES, products)
   })
 }
 
-export const getAttractionsFromCountry = ({ dispatch }, countryId) => {
+export const getAttractionsFromServer = ({dispatch, state}) => {
   server.getAttractionsFromCountry(attractions => {
-    console.log(attractions)
     dispatch(RECEIVE_ATTRACTIONS, attractions)
-  }, countryId)
+  }, state.attractions.currentCountryId)
 }
 
-export const switchCountry = ({ dispatch }, id) => {
-  dispatch(SWITCH_COUNTRY, id)
+export const switchCountry = ({dispatch}, id) => {
+  dispatch(SWITCH_COUNTRY, Number(id))
+}
+
+export const favoriteAttraction = ({dispatch}, id) => {
+  dispatch(FAVORITE_ATTRACTION, Number(id))
 }
