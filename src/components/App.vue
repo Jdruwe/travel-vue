@@ -119,4 +119,17 @@
     margin-right: 5px;
   }
 
+  .header {
+    margin-top: 10px;
+    text-align: center;
+    padding: 20px;
+
+  .header__title{
+    vertical-align: middle;
+    font-size: 30pt;
+    font-weight: 200;
+  }
+
+  }
+
 </style>

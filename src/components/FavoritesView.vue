@@ -1,8 +1,8 @@
 <template>
   <div>
 
-    <div class="favorites-header">
-      <h3 class="favorites-header__title">Favorites</h3>
+    <div class="header">
+      <h3 class="header__title">Favorites ({{attractions.length}})</h3>
     </div>
 
     <div v-if="attractions.length > 0" class="row">
@@ -40,18 +40,5 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-
-  .favorites-header {
-    margin-top: 10px;
-    text-align: center;
-    padding: 20px;
-
-    .favorites-header__title{
-      vertical-align: middle;
-      font-size: 30pt;
-      font-weight: 200;
-    }
-
-  }
 
 </style>
