@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <h3>{{country.name | capitalize}}</h3>
+  <div class="attractions">
+    <div class="attractions__country">
+      <p>{{country.name | capitalize}}</p>
+    </div>
     <div v-if="attractions.length > 0" class="row">
       <attraction v-for="attraction in attractions" :attraction="attraction"></attraction>
     </div>
@@ -49,6 +51,21 @@
 
   .breadcrumb {
     color: black;
+  }
+
+  .attractions {
+    .attractions__country {
+
+      p {
+        margin: 0px;
+      }
+
+      font-size: 30pt;
+      margin-top: 10px;
+      text-align: center;
+      padding: 20px;
+      font-weight: 200;
+    }
   }
 
 </style>
