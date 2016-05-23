@@ -8,5 +8,5 @@ export function getCountry (state) {
 export const getAttractions = state => state.attractions.all
 
 export function getFavoriteAttractions (state) {
-  return state.attractions.all.filter(attraction => attraction.favorite === true)
+  return state.attractions.favorites.filter(attraction => attraction.favorite === true)
 }

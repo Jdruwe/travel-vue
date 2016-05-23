@@ -10,7 +10,7 @@
 
     <div v-else class="row">
       <div class="col s12 m5">
-        <div class="card-panel indigo lighten-2">
+        <div class="card-panel orange lighten-1">
           <span class="white-text">
             <i class="material-icons left">warning</i>There are no attractions available yet, please come back later.
           </span>

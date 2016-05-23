@@ -12,7 +12,8 @@ import {
 // initial state
 const state = {
   currentCountryId: null,
-  all: []
+  all: [],
+  favorites: []
 }
 
 // mutations
@@ -25,9 +26,11 @@ const mutations = {
   },
   [FAVORITE_ATTRACTION] (state, attraction) {
     attraction.favorite = true
+    state.favorites.push(attraction)
   },
   [UNDO_FAVORITE_ATTRACTION] (state, attraction) {
     attraction.favorite = false
+    state.favorites.$remove(attraction)
   }
 }
 
