@@ -1,7 +1,8 @@
 <template>
-  <div class="attractions">
-    <div class="attractions__country">
-      <p>{{country.name | capitalize}}</p>
+  <div>
+    <div class="attractions-country">
+      <span class="attractions-country__name">{{country.name | capitalize}}</span>
+      <img class="attractions-country__flag" :src="imagePath" alt="flag">
     </div>
     <div v-if="attractions.length > 0" class="row">
       <attraction v-for="attraction in attractions" :attraction="attraction"></attraction>
@@ -42,6 +43,11 @@
     },
     components: {
       Attraction
+    },
+    computed: {
+      imagePath: function () {
+        return '/static/flags/' + this.country.name + '.png'
+      }
     }
   }
 </script>
@@ -53,19 +59,18 @@
     color: black;
   }
 
-  .attractions {
-    .attractions__country {
+  .attractions-country {
+    font-size: 30pt;
+    margin-top: 10px;
+    text-align: center;
+    padding: 20px;
+    font-weight: 200;
 
-      p {
-        margin: 0px;
-      }
-
-      font-size: 30pt;
-      margin-top: 10px;
-      text-align: center;
-      padding: 20px;
-      font-weight: 200;
+    .attractions-country__flag{
+      vertical-align: middle;
     }
+
   }
+
 
 </style>
