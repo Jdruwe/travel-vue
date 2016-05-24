@@ -1,6 +1,6 @@
 # travel-vue
 
-> A Vue.js demo project originally generated using vue-cli build to demonstrate some of the potential of VueJS
+A Vue.js demo project originally generated using vue-cli build to demonstrate some of the potential of VueJS
 
 
 
