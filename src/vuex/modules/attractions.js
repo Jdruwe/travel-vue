@@ -3,7 +3,6 @@
  */
 
 import {
-  SWITCH_COUNTRY,
   RECEIVE_ATTRACTIONS,
   FAVORITE_ATTRACTION,
   UNDO_FAVORITE_ATTRACTION
@@ -18,9 +17,6 @@ const state = {
 
 // mutations
 const mutations = {
-  [SWITCH_COUNTRY] (state, countryId) {
-    state.currentCountryId = countryId
-  },
   [RECEIVE_ATTRACTIONS] (state, attractions) {
     state.all = attractions
   },

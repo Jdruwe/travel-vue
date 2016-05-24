@@ -2,7 +2,7 @@
 export const getCountries = state => state.countries.all
 
 export function getCountry (state) {
-  return state.countries.all.filter(country => country.id === state.attractions.currentCountryId)[0]
+  return state.countries.all.filter(country => country.id === Number(state.route.params.id))[0]
 }
 
 export const getAttractions = state => state.attractions.all

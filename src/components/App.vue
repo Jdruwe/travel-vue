@@ -49,14 +49,14 @@
 
 <script>
   import store from './../vuex/store'
+  import {getCountriesFromServer} from '../vuex/actions'
+
   var $ = window.jQuery = require('jquery')
   require('materialize-css/bin/materialize.js')
 
-  import {getCountriesFromServer} from '../vuex/actions'
-
   export default {
     name: 'App',
-    store: store,
+    store,
     events: {
       'nav-icon-clicked': function () {
         this.$router.go('/')

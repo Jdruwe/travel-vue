@@ -38,7 +38,6 @@
       }
     },
     created () {
-      this.switchCountry(this.$route.params.id)
       this.getAttractionsFromServer()
     },
     components: {

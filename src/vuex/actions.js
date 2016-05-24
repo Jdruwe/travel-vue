@@ -16,7 +16,7 @@ export const getCountriesFromServer = ({dispatch}) => {
 export const getAttractionsFromServer = ({dispatch, state}) => {
   server.getAttractionsFromCountry(attractions => {
     dispatch(RECEIVE_ATTRACTIONS, attractions)
-  }, state.attractions.currentCountryId)
+  }, Number(state.route.params.id))
 }
 
 export const switchCountry = ({dispatch}, id) => {
