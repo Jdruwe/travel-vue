@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="attractions-country">
+    <div class="attractions-country" v-if="country">
       <span class="attractions-country__name">{{country.name | capitalize}}</span>
       <img class="attractions-country__flag" :src="imagePath" alt="flag">
     </div>
