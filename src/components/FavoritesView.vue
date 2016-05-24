@@ -1,10 +1,8 @@
 <template>
   <div>
-
     <div class="header">
-      <h3 class="header__title">Favorites ({{attractions.length}})</h3>
+      <span class="header__title">Favorites ({{attractions.length}})</span>
     </div>
-
     <div v-if="attractions.length > 0" class="row">
       <attraction v-for="attraction in attractions" :attraction="attraction"></attraction>
     </div>

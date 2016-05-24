@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <div class="header">
-      <h3 class="header__title">About</h3>
+      <span class="header__title">About</span>
     </div>
     <img class="about__image circle" src="/static/jeroen.jpg" alt="Jeroen Druwé">
     <p>This website was build by <a href="http://jeroendruwe.be" target="_blank">Jeroen Druwé</a> to demonstrate some of
