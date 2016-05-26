@@ -2,7 +2,9 @@
 
 A Vue.js demo project originally generated using vue-cli build to demonstrate some of the potential of VueJS
 
+## Blog
 
+http://jeroendruwe.be/travel-example-vue-js-single-page-app/
 
 
 ## vue-cli
